@@ -2,8 +2,13 @@
 	1.1 - Importando sprites do player - FEITO
 	1.2 - Criando o objeto do player e dando o sprite a ele - FEITO
 	1.3 - Mover o player com WASD dentro do step - FEITO
-
+	1.4 - Melhorando código da movimentação - FEITO
+	
 2 - Ajustando as dimensões da room e ajustando a view e a viewport da room - FEITO
 	2.1 - Criando uma viewport e camera para o jogo - FEITO
 	2.2 - Ajustando as dimensões para a view ser grande e o viewport menor - FEITO
-	
+
+3 - Atirando
+	3.1 - Importando sprites do tiro do player - FEITO
+	3.2 - Criando objeto do tiro do player - FEITO
+	3.3 - Fazendo o tiro ir pra cima 
