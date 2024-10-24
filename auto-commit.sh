@@ -40,14 +40,23 @@ commit_file() {
   echo "File '$file' committed with message: '$msg'"
 }
 
-# Processa arquivos modificados e deletados
+# Verifica especificamente se 'Space Shooter.yyp' foi alterado
+if git status --porcelain | grep -q ' M .*Space Shooter\.yyp'; then
+  git add "Space Shooter.yyp"
+  git commit -m "fix(project): modified Space Shooter.yyp"
+  echo "File 'Space Shooter.yyp' committed successfully."
+fi
+
+# Processa arquivos modificados e deletados (exceto Space Shooter.yyp)
 while IFS= read -r file; do
-  if [[ -f "$file" ]]; then
-    commit_file "$file" "modified"
-  else
-    git rm "$file"
-    git commit -m "chore($(get_scope "$file")): removed $file"
-    echo "File '$file' has been removed and committed."
+  if [[ "$file" != "Space Shooter.yyp" ]]; then
+    if [[ -f "$file" ]]; then
+      commit_file "$file" "modified"
+    else
+      git rm "$file"
+      git commit -m "chore($(get_scope "$file")): removed $file"
+      echo "File '$file' has been removed and committed."
+    fi
   fi
 done < <(git status --porcelain | grep -E '^( M| D)' | awk '{print substr($0,4)}')
 
