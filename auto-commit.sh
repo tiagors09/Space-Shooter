@@ -1,42 +1,52 @@
 #!/bin/bash
 
-# check if there are changes to be added
+# Verifica se há mudanças pendentes
 if git diff --exit-code && git diff --cached --exit-code; then
-  echo "no changes to commit."
+  echo "No changes to commit."
   exit 0
 fi
 
-# function to add, commit, and push a file
+# Função para adicionar, commitar e exibir mensagem apropriada
 commit_file() {
   file=$1
-  msg=$2
+  change_type=$2
+
+  case $change_type in
+    "modified")
+      msg="fix: modified $file"
+      ;;
+    "deleted")
+      msg="chore: removed $file"
+      ;;
+    "new")
+      msg="feat: added new file $file"
+      ;;
+  esac
 
   git add "$file"
   git commit -m "$msg"
-  echo "file '$file' has been added and committed with the message: '$msg'"
+  echo "File '$file' committed with message: '$msg'"
 }
 
-echo "adding and committing each file individually..."
-
-# modified and deleted files
+# Processa arquivos modificados e deletados
 for file in $(git status --porcelain | grep -E '^( M| D)' | awk '{print $2}'); do
   if [[ -f $file ]]; then
-    commit_file "$file" "modified: $file"
+    commit_file "$file" "modified"
   else
     git rm "$file"
-    git commit -m "removed: $file"
-    echo "file '$file' has been removed and committed."
+    git commit -m "chore: removed $file"
+    echo "File '$file' has been removed and committed."
   fi
 done
 
-# untracked files
+# Processa arquivos não rastreados (novos)
 for file in $(git status --porcelain | grep '^??' | awk '{print $2}'); do
-  commit_file "$file" "new file: $file"
+  commit_file "$file" "new"
 done
 
-# push to the main branch
-echo "pushing to the main branch..."
+# Faz push para a branch principal
+echo "Pushing to the main branch..."
 git push origin main
 
-echo "process completed successfully!"
+echo "Process completed successfully!"
 
