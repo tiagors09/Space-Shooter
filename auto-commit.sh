@@ -6,20 +6,32 @@ if git diff --exit-code && git diff --cached --exit-code; then
   exit 0
 fi
 
-# Função para adicionar, commitar e exibir mensagem apropriada
+# Função para obter o scope com base no caminho do arquivo
+get_scope() {
+  file=$1
+  # Extraindo a primeira parte do caminho como escopo (ex: scripts/file.gml => scripts)
+  scope=$(echo "$file" | cut -d'/' -f1)
+  echo "$scope"
+}
+
+# Função para adicionar, commitar e exibir mensagem apropriada com scope
 commit_file() {
   file=$1
   change_type=$2
 
+  # Obtendo o scope do arquivo
+  scope=$(get_scope "$file")
+
+  # Gerando mensagem baseada no tipo de mudança e scope
   case $change_type in
     "modified")
-      msg="fix: modified $file"
+      msg="fix(${scope}): modified $file"
       ;;
     "deleted")
-      msg="chore: removed $file"
+      msg="chore(${scope}): removed $file"
       ;;
     "new")
-      msg="feat: added new file $file"
+      msg="feat(${scope}): added new file $file"
       ;;
   esac
 
@@ -34,7 +46,7 @@ for file in $(git status --porcelain | grep -E '^( M| D)' | awk '{print $2}'); d
     commit_file "$file" "modified"
   else
     git rm "$file"
-    git commit -m "chore: removed $file"
+    git commit -m "chore($(get_scope "$file")): removed $file"
     echo "File '$file' has been removed and committed."
   fi
 done
