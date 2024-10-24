@@ -8,7 +8,7 @@ fi
 
 # Função para obter o scope com base no caminho do arquivo
 get_scope() {
-  file=$1
+  file="$1"
   # Extraindo a primeira parte do caminho como escopo (ex: scripts/file.gml => scripts)
   scope=$(echo "$file" | cut -d'/' -f1)
   echo "$scope"
@@ -16,8 +16,8 @@ get_scope() {
 
 # Função para adicionar, commitar e exibir mensagem apropriada com scope
 commit_file() {
-  file=$1
-  change_type=$2
+  file="$1"
+  change_type="$2"
 
   # Obtendo o scope do arquivo
   scope=$(get_scope "$file")
@@ -41,24 +41,23 @@ commit_file() {
 }
 
 # Processa arquivos modificados e deletados
-for file in $(git status --porcelain | grep -E '^( M| D)' | awk '{print $2}'); do
-  if [[ -f $file ]]; then
+while IFS= read -r file; do
+  if [[ -f "$file" ]]; then
     commit_file "$file" "modified"
   else
     git rm "$file"
     git commit -m "chore($(get_scope "$file")): removed $file"
     echo "File '$file' has been removed and committed."
   fi
-done
+done < <(git status --porcelain | grep -E '^( M| D)' | awk '{print substr($0,4)}')
 
 # Processa arquivos não rastreados (novos)
-for file in $(git status --porcelain | grep '^??' | awk '{print $2}'); do
+while IFS= read -r file; do
   commit_file "$file" "new"
-done
+done < <(git status --porcelain | grep '^??' | awk '{print substr($0,4)}')
 
 # Faz push para a branch principal
 echo "Pushing to the main branch..."
 git push origin main
 
 echo "Process completed successfully!"
-
