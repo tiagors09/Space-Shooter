@@ -1,0 +1,2 @@
+1 - Criado o player
+	1.1 - Importando sprites do player - Feito
