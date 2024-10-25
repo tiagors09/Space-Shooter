@@ -16,3 +16,9 @@
 	3.5 - Dando um efeito legal no  - FEITO
 		3.5.1 - Fazendo ele nascer grande e ficar pequeno com o tempo - FEITO
 	3.6 - Destruir o tiro quando ele sair da tela
+
+4 - Criando o primeiro inimigo - FEITO
+	4.1 - Importando as sprites - FEITO
+	4.2 - Criando o objeto - FEITO
+	4.3 - Fazendo ele ir para baixo - FEITO
+	
