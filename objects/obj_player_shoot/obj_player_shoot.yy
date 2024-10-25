@@ -11,8 +11,8 @@
   "name":"obj_player_shoot",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Shoots",
+    "path":"folders/Objects/Shoots.yy",
   },
   "parentObjectId":null,
   "persistent":false,
