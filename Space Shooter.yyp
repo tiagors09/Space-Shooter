@@ -44,6 +44,8 @@
   "name":"Space Shooter",
   "resources":[
     {"id":{"name":"Note1","path":"notes/Note1/Note1.yy",},},
+    {"id":{"name":"obj_enemy_1","path":"objects/obj_enemy_1/obj_enemy_1.yy",},},
+    {"id":{"name":"obj_enemy_factory","path":"objects/obj_enemy_factory/obj_enemy_factory.yy",},},
     {"id":{"name":"obj_player","path":"objects/obj_player/obj_player.yy",},},
     {"id":{"name":"obj_player_shoot","path":"objects/obj_player_shoot/obj_player_shoot.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
