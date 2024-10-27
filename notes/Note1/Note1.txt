@@ -28,4 +28,7 @@
 	5.3 - Fazendo o tiro ir para baixo - FEITO
 	5.4 - Atirando de fato - FEITO
 	5.5 - Efeito no tiro - FEITO
-	
+
+6 - Fazendo o tiro do player acertar o inimigo
+	6.1 - Se destruir ao acertar inimigo - FEITO
+	6.2 - Criar impacto do tiro do player
