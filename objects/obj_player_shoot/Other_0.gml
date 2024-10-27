@@ -1,1 +1,1 @@
-instance_destroy();
+is_outside_room = true;
