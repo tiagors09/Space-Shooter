@@ -22,13 +22,19 @@
 	4.2 - Criando o objeto - FEITO
 	4.3 - Fazendo ele ir para baixo - FEITO
 
-5 - Fazendo o inimigo 1 atirar
+5 - Fazendo o inimigo 1 atirar - FEITO
 	5.1 - Importando a sprite do  - FEITO
 	5.2 - Criar o objeto do tiro - FEITO
 	5.3 - Fazendo o tiro ir para baixo - FEITO
 	5.4 - Atirando de fato - FEITO
 	5.5 - Efeito no tiro - FEITO
 
-6 - Fazendo o tiro do player acertar o inimigo
+6 - Fazendo o tiro do player acertar o inimigo - FEITO
 	6.1 - Se destruir ao acertar inimigo - FEITO
-	6.2 - Criar impacto do tiro do player
+	6.2 - Criar impacto do tiro do player - FEITO
+	6.3 - Fazendo o impacto do tiro desaparecer ao fim da animação - FEITO
+	6.4 - Fazendo o tiro não criar o impacto quando ele sair da room - FEITO
+
+7 - Fazendo o tiro do inimigo acertar o player e ser destruido
+	7.1 - Destruindo o tiro do inimigo quando ele sair da room
+	
