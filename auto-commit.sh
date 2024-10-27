@@ -40,16 +40,16 @@ commit_file() {
   echo "File '$file' committed with message: '$msg'"
 }
 
-# Verifica especificamente se 'Space Shooter.yyp' foi alterado
-if git status --porcelain | grep -q ' M .*Space Shooter\.yyp'; then
-  git add "Space Shooter.yyp"
-  git commit -m "fix(project): modified Space Shooter.yyp"
-  echo "File 'Space Shooter.yyp' committed successfully."
-fi
+# Verifica especificamente se algum arquivo '.yyp' foi alterado
+while IFS= read -r yyp_file; do
+  git add "$yyp_file"
+  git commit -m "fix(project): modified $yyp_file"
+  echo "File '$yyp_file' committed successfully."
+done < <(git status --porcelain | grep -E ' M .*\.yyp$' | awk '{print substr($0,4)}')
 
-# Processa arquivos modificados e deletados (exceto Space Shooter.yyp)
+# Processa arquivos modificados e deletados (exceto arquivos .yyp)
 while IFS= read -r file; do
-  if [[ "$file" != "Space Shooter.yyp" ]]; then
+  if [[ "${file##*.}" != "yyp" ]]; then
     if [[ -f "$file" ]]; then
       commit_file "$file" "modified"
     else
@@ -70,3 +70,4 @@ echo "Pushing to the main branch..."
 git push origin main
 
 echo "Process completed successfully!"
+
