@@ -19,11 +19,4 @@ if (y >= room_height - ( sprite_height/2))
 if (x >= room_width - (sprite_width/2))
 		x = room_width - (sprite_width/2);
 
-if _shoot {
-	instance_create_layer(
-		x,
-		y - (sprite_height/2),
-		"Shoots",
-		obj_player_shoot
-	);
-}
+shooting(x, y - (sprite_height/2), _shoot, obj_player_shoot);
