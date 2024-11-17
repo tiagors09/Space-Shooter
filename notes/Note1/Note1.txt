@@ -65,3 +65,6 @@
 		9.4.5 - Criar variável de cores - FEITO
 		
 10 - Criando background para o jogo - FEITO
+
+11 - Criando segundo inimigo
+	11.1  - Importando sprite do segundo inimigo
