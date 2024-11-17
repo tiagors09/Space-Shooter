@@ -70,4 +70,5 @@
 	11.1 - Importando sprite do segundo inimigo -  FEITO
 	11.2 - Criando o objeto dele - FEITO
 	11.3 - Fazendo o inimigo 2 herdar comportamentos do inimigo 1 - FEITO
-	
+	11.4 - Fazedo o inimigo 2 mudar de direção ao chegar (mais ou menos) no meio da room
+		11.4.1 - Chegando de que lado da room o inimigo 2 está
