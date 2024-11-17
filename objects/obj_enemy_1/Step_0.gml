@@ -1,2 +1,2 @@
-if (y - (sprite_height/2) > room_height) 
+if (y - sprite_height > room_height) 
 	instance_destroy(id, true);
