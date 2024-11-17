@@ -1,6 +1,7 @@
 draw_self();
 
 gpu_set_blendmode(bm_add);
+
 draw_sprite_ext(
 	spr_shoot_shine_1,
 	image_index,
@@ -12,5 +13,6 @@ draw_sprite_ext(
 	color,
 	0.5
 );
+
 gpu_set_blendmode(bm_normal);
 
