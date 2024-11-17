@@ -82,4 +82,9 @@
 	12.1 - Importando o sprite - FEITO
 	12.2 - Criando o objeto - FEITO
 	12.3 - Herdar comportamentos de obj_shoot_1 - FEITO
+	12.4 - Iniciar indo na direção do player - FEITO
+	14.6 - Ido para o player se ele existir - FEITO
 	
+13 - Criação procedural dos inimigos
+
+14 - Criando o objeto controlador do jog
