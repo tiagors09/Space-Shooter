@@ -67,4 +67,7 @@
 10 - Criando background para o jogo - FEITO
 
 11 - Criando segundo inimigo
-	11.1  - Importando sprite do segundo inimigo
+	11.1 - Importando sprite do segundo inimigo -  FEITO
+	11.2 - Criando o objeto dele - FEITO
+	11.3 - Fazendo o inimigo 2 herdar comportamentos do inimigo 1 - FEITO
+	
