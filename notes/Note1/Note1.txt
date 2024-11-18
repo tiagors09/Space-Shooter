@@ -86,5 +86,6 @@
 	14.6 - Ido para o player se ele existir - FEITO
 	
 13 - Criação procedural dos inimigos
+	13.1 - Fazer com que o objeto control crie inimigos de tempo em tempo
 
 14 - Criando o objeto controlador do jog
