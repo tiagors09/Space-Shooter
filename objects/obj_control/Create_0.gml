@@ -9,7 +9,7 @@ gain_points = function(_value) {
 	}
 }
 
-alarm[0] = 2 * game_get_speed(gamespeed_fps);
+alarm[0] = 1 * game_get_speed(gamespeed_fps);
 
 level = 1;
 
