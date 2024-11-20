@@ -85,7 +85,24 @@
 	12.4 - Iniciar indo na direção do player - FEITO
 	14.6 - Ido para o player se ele existir - FEITO
 	
-13 - Criação procedural dos inimigos
-	13.1 - Fazer com que o objeto control crie inimigos de tempo em tempo
+13 - Criação procedural dos inimigos - FEITO
+	13.1 - Fazer com que o objeto control crie inimigos de tempo em tempo - FEITO
+		13.1.1 - Fazendo com que a posição x e y dos inimigos criados seja aleatória - FEITO
+	13.2 - Criando inimigos diferentes com base no level do jogo
+	13.3 - Criar ONDAS de inimigos - FEITO
+	13.4 - Criar as ondas APENAS se não tem mais inimigos no jogo 
 
-14 - Criando o objeto controlador do jog
+14 - Criando o objeto controlador do jogo
+	14.1 - Ganhando pontos ao destruir o inimigo - FEITO
+	
+15 - Criando o sistema de pontos - FEITO
+	15.1 - Iniciando a variável pontos - FEITO
+	15.2 - Ganhando pontos ao destruir inimigos - FEITO
+	15.3 - Rodando o método de ganhar pontos APENAS se a instância do objeto control exisitir - FEITO
+	15.4 - Fazendo com que inimigos diferentes, atribuam pontos diferentes na pontuação - FEITO
+	15.5 - Criando uma variável nos inimigos chamada pontos e ela vai ter quantos pontos a serem atribuidos - FEITO
+
+16 - Criando sistema de level
+	16.1 - Iniciando a variável level - FEITO
+	16.2 - Exibindo o level - FEITO
+	16.3 - Ganhando level quando eu ganhar um determinado número de pontos
