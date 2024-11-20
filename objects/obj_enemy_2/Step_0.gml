@@ -1,7 +1,5 @@
 event_inherited();
 
-shoot = obj_shoot_2;
-
 if (y > room_height/3 and move_to_otherside) {
 	if (x < room_width/2) {
 		hspeed = 4;
