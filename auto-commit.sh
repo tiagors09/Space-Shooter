@@ -42,10 +42,23 @@ commit_file() {
 
 # Verifica especificamente se algum arquivo '.yyp' foi alterado
 while IFS= read -r yyp_file; do
-  git add "$yyp_file"
-  git commit -m "fix(project): modified $yyp_file"
-  echo "File '$yyp_file' committed successfully."
-done < <(git status --porcelain | grep -E ' M .*\.yyp$' | awk '{print substr($0,4)}')
+  echo "Found .yyp file to process: '$yyp_file'"
+  
+  # Tenta adicionar o arquivo
+  if git add "$yyp_file"; then
+    echo "Successfully added '$yyp_file' to staging area."
+  else
+    echo "Failed to add '$yyp_file'. Skipping."
+    continue
+  fi
+
+  # Tenta committar o arquivo
+  if git commit -m "fix(project): modified $yyp_file"; then
+    echo "File '$yyp_file' committed successfully."
+  else
+    echo "Failed to commit '$yyp_file'."
+  fi
+done < <(git status --porcelain | grep -E '^[ MARC][ MARC] .*\.yyp$' | awk '{print substr($0,4)}')
 
 # Processa arquivos modificados e deletados (exceto arquivos .yyp)
 while IFS= read -r file; do
