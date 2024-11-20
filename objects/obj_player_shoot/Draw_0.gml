@@ -3,7 +3,7 @@ draw_self();
 gpu_set_blendmode(bm_add);
 
 draw_sprite_ext(
-	spr_shoot_shine_1,
+	vfx,
 	image_index,
 	x,
 	y,
