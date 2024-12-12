@@ -122,3 +122,10 @@
 	19.1 - Importando a sprite - FEITO
 	19.2 - Criando o objeto tiro 2 do player - FEITO
 	19.3 - Herdar de tiro 1 - FEITO
+	19.4 - Ajustando os efeitos do tiro 2 - FEITO
+	19.5 - Criando dois tiros por vez, um em cada asa
+	19.6 - Fazendo o tiro mudar de direção
+		19.6.1 - Fazendo o tiro ganhar uma direção
+		19.6.2 - Fazendo o tiro inverter a direção horizontal
+	19.6 - Criando o terceiro level do tiro
+		19.6.1 - Criando o tiro 1 e dois
