@@ -1,3 +1,4 @@
+#region Movement
 var _up, _down, _left, _right;
 
 _up = keyboard_check(ord("W")) or keyboard_check(vk_up);
@@ -16,8 +17,36 @@ if (y >= room_height - ( sprite_height/2))
 
 if (x >= room_width - (sprite_width/2))
 		x = room_width - (sprite_width/2);
+#endregion
 
+#region Shoot
 if ( keyboard_check_pressed(vk_space) and alarm[0] == -1) {
+	var _shoot_y = y - (sprite_height/2);
+	
 	alarm[0] = shoot_delay * game_get_speed(gamespeed_fps);
-	scr_shoot(x, y - (sprite_height/2), obj_player_shoot);
+	
+	if (shoot_level == 1)
+		scr_shoot(x, _shoot_y, obj_player_shoot);
+	
+	if (shoot_level == 2)
+		shoot_level_2();
+		
+	if (shoot_level == 3) {
+		scr_shoot(x, _shoot_y, obj_player_shoot);
+		shoot_level_2();
+	}
+	
+	if (shoot_level == 4) {
+		var _direction = 75;
+		
+		repeat (3) {
+			var _shoot = scr_shoot(x, _shoot_y, obj_player_shoot);
+			
+			_shoot.direction = _direction;
+			_shoot.image_angle = _shoot.direction - 90;
+			
+			_direction += 15;
+		}
+	}
 }
+#endregion
