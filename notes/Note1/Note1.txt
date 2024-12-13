@@ -128,4 +128,16 @@
 		19.6.1 - Fazendo o tiro ganhar uma direção
 		19.6.2 - Fazendo o tiro inverter a direção horizontal
 	19.6 - Criando o terceiro level do tiro
-		19.6.1 - Criando o tiro 1 e dois
+		19.6.1 - Criando o tiro 1 e dois tiros 2 - FEITO
+	19.7 - Criando o quarto level do tiro - FEITO
+	19.8 - Criando o quinto level do tiro - FEITO
+	
+20 - Fazendo o player ganhar power up
+	20.1 - Criando a sprite do power up - FEITO
+	20.2 - Criando o objeto do poewer up - FEITO
+	20.3 - Criar a chance de cada power up - FEITO
+	20.4 - Criar o método level up no player - FEITO
+	20.5 - Fazer o item colidir com o player e dar o power up para ele - FEITO
+	20.6 - Destruir o item ao colidir com o player - FEITO
+	20.7 - Criando impacto do tiro ao ser destruido - FEITO
+	20.8 - Fazendo os inimigos terem uma chance de dropar o power up - FEITO
