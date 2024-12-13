@@ -36,17 +36,12 @@ if ( keyboard_check_pressed(vk_space) and alarm[0] == -1) {
 		shoot_level_2();
 	}
 	
-	if (shoot_level == 4) {
-		var _direction = 75;
+	if (shoot_level == 4) 
+		shoot_level_4();
 		
-		repeat (3) {
-			var _shoot = scr_shoot(x, _shoot_y, obj_player_shoot);
-			
-			_shoot.direction = _direction;
-			_shoot.image_angle = _shoot.direction - 90;
-			
-			_direction += 15;
-		}
+	if (shoot_level == 5) {
+		shoot_level_2();
+		shoot_level_4();
 	}
 }
 #endregion
