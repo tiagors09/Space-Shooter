@@ -45,3 +45,24 @@ if ( keyboard_check_pressed(vk_space) and alarm[0] == -1) {
 	}
 }
 #endregion
+
+#region Create shield
+var _create_shield_button = keyboard_check_pressed(
+	ord("E")
+);
+
+if (_create_shield_button and not created_shield) {
+	var _shield = instance_create_layer(
+		x,
+		y,
+		"Shield",
+		obj_shield
+	);
+	
+	_shield.target = id;
+	
+	created_shield = true;
+	
+	alarm[1] = game_get_speed(gamespeed_fps) * 5;
+}
+#endregion
