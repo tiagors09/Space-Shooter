@@ -1,1 +1,2 @@
-instance_destroy();
+instance_destroy(id);
+other.subtract_life();
