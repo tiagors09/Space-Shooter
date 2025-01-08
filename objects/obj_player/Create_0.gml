@@ -1,6 +1,19 @@
+life = 3;
+
 velocity = 10;
 shoot_delay = 1;
 shoot_level = 1;
+
+max_shoot_level = 5;
+min_shoot_delay = .12;
+max_velocity = 20;
+
+created_shield = false;
+
+subtract_life = function() {
+	if (life > 0) life--;
+	else instance_destroy(id, true);
+}
 
 shoot_level_2 = function() {
 		// Left shoot
@@ -27,19 +40,15 @@ shoot_level_4 = function() {
 		}
 }
 
-// @method gain_powe_up(_rate)
 gain_power_up = function(_rate) {
 	if (_rate >= 90 && _rate <= 100) {
-		show_debug_message("shoot level");
-		if (shoot_level < 5) 
+		if (shoot_level < max_shoot_level) 
 			shoot_level++;
 	} else if (_rate >= 45 && _rate < 90) {
-		show_debug_message("shoot delay");
-		if (shoot_delay > .5)
-			shoot_delay -= .1;
+		if (shoot_delay > min_shoot_delay)
+			shoot_delay -= .01;
 	} else {
-		show_debug_message("velocity");
-		if (velocity < 20)
+		if (velocity < max_velocity)
 			velocity++;
 	}
 }
