@@ -1,29 +1,26 @@
-draw_text(
-	20,
-	20,
-	"ponts " + string(points)
-);
+var _gui_width = display_get_gui_width();
+var _gui_height = display_get_gui_height();
 
-draw_text(
-	20,
-	40,
-	"level " + string(level)
-);
+var _life_spr_padding_left = 48;
+var _mutiplier = 0
 
-if (instance_exists(obj_player)) {
-	draw_text(
-		20,
-		60,
-		"player stats"
-	);
-
-	draw_text(
-		20,
-		80,
-		"velocity " + string(obj_player.velocity) + " | " + "shoot level " + string(obj_player.shoot_level) + " | " + "shoot delay " + string(obj_player.shoot_delay)
-	);
+with (obj_player) {
+    repeat (obj_player.life) {
+        draw_sprite_ext( 
+            spr_player,
+            0,
+            (_gui_width / 20) + (_life_spr_padding_left* _mutiplier), 
+            _gui_height - (sprite_get_height(spr_player) / 4),
+            .3,
+            .3,
+            0,
+            c_white,
+            .5
+        );
+        
+        _mutiplier++;
+    }
 }
-
 
 
 
