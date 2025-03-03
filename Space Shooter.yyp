@@ -68,6 +68,7 @@
     {"id":{"name":"obj_shoot_impact","path":"objects/obj_shoot_impact/obj_shoot_impact.yy",},},
     {"id":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"id":{"name":"scr_shoot","path":"scripts/scr_shoot/scr_shoot.yy",},},
+    {"id":{"name":"sq_gameover","path":"sequences/sq_gameover/sq_gameover.yy",},},
     {"id":{"name":"Aggressor","path":"sounds/Aggressor/Aggressor.yy",},},
     {"id":{"name":"Darkling","path":"sounds/Darkling/Darkling.yy",},},
     {"id":{"name":"sfx_explosion","path":"sounds/sfx_explosion/sfx_explosion.yy",},},
