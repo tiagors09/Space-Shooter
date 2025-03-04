@@ -5,7 +5,7 @@ var _life_spr_padding_left = 48;
 var _mutiplier = 0
 
 with (obj_player) {
-    repeat (obj_player.life) {
+    repeat (obj_player.life + 1) {
         draw_sprite_ext( 
             spr_player,
             0,

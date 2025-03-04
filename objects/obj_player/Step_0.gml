@@ -1,3 +1,5 @@
+show_debug_message(string(life));
+
 #region Movement
 var _up, _down, _left, _right;
 

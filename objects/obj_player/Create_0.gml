@@ -12,7 +12,7 @@ created_shield = false;
 
 subtract_life = function() {
 	if (life > 0) life--;
-	else instance_destroy(id, true);
+	else instance_destroy(id);
 }
 
 shoot_level_2 = function() {

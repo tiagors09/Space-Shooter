@@ -1,4 +1,5 @@
 points = 0;
+gameover_seq = pointer_null;
 
 gain_points = function(_value) {
 	points += _value;
@@ -44,4 +45,14 @@ create_enemy = function() {
 		"Instances",
 		_enemy
 	);
+}
+
+if (
+    not instance_exists(obj_camera_shake)
+) {
+    instance_create_layer(
+        0, 0,
+        "Instances",
+        obj_camera_shake
+    );    
 }
