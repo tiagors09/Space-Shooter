@@ -53,7 +53,7 @@ var _create_shield_button = keyboard_check_pressed(
 	ord("E")
 );
 
-if (_create_shield_button and not created_shield) {
+if (_create_shield_button and not created_shield and shield > 0) {
 	var _shield = instance_create_layer(
 		x,
 		y,
@@ -62,6 +62,8 @@ if (_create_shield_button and not created_shield) {
 	);
 	
 	_shield.target = id;
+	
+	shield--;
 	
 	created_shield = true;
 	

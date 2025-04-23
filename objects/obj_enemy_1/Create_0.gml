@@ -17,7 +17,7 @@ if (_is_colliding_with_enemy) {
 drop_item = function(_rate) {
 	var _value = random(100);
 	
-	if (_value <= drop_rate)
+	if (_value <= drop_rate && y > 96)
 		instance_create_layer(
 			x,
 			y,

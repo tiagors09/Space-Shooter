@@ -20,6 +20,24 @@ with (obj_player) {
         
         _mutiplier++;
     }
+	
+	_mutiplier = 0;
+	
+	repeat (obj_player.shield) {
+		draw_sprite_ext( 
+            spr_shield,
+            0,
+            (_gui_width / 20) + (_life_spr_padding_left* _mutiplier), 
+            _gui_height - (sprite_get_height(spr_shield) / 2.5),
+            .3,
+            .3,
+            0,
+            c_white,
+            .5
+        );
+		
+		_mutiplier++;
+	}
 }
 
 

@@ -10,6 +10,8 @@ max_velocity = 20;
 
 created_shield = false;
 
+shield = 3;
+
 subtract_life = function() {
 	if (life > 0) life--;
 	else instance_destroy(id);

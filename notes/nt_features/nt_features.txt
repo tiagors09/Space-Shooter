@@ -139,6 +139,8 @@
 - [x] Criando o objeto
 - [x] Fazendo o player criar o escudo ao apertar "E"
 - [x] Melhorando efeitos e colisão
+- [x] Limitando a quantidade de escudo do player
+- [x] Exibindo escudos para o player
 
 ### 22 - Ajustes gerais 
 - [x] Arrumando as máscaras de colisão
@@ -151,4 +153,7 @@
 - [x] Criando animação de explosão ao morrer
 - [x] Exibindo a vida do player
 - [x] Fazendo o player morrer ao trombar com o inimigo
-- [ ] Criando uma tela de game over quando o jogador perder
+- [x] Criando uma tela de game over quando o jogador perder
+
+### 24 - Screenshake!
+- [x] Criar screenshake!
