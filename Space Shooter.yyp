@@ -56,6 +56,7 @@
   "resources":[
     {"id":{"name":"nt_features","path":"notes/nt_features/nt_features.yy",},},
     {"id":{"name":"obj_big_shoot","path":"objects/obj_big_shoot/obj_big_shoot.yy",},},
+    {"id":{"name":"obj_boss","path":"objects/obj_boss/obj_boss.yy",},},
     {"id":{"name":"obj_camera_shake","path":"objects/obj_camera_shake/obj_camera_shake.yy",},},
     {"id":{"name":"obj_control","path":"objects/obj_control/obj_control.yy",},},
     {"id":{"name":"obj_enemies_explosion","path":"objects/obj_enemies_explosion/obj_enemies_explosion.yy",},},

@@ -1,3 +1,4 @@
+/*
 if (
     not instance_exists(obj_control)
 ) {
@@ -7,3 +8,4 @@ if (
         obj_control
     );    
 }
+*/
