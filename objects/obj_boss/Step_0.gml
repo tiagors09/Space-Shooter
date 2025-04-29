@@ -1,3 +1,7 @@
+if (keyboard_check(vk_enter)) {
+	life -= 10;
+}
+
 wait_state--;
 
 if (wait_state <= 0) {

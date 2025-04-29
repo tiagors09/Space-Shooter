@@ -17,18 +17,24 @@ current_state = choose(
 );
 */
 
-current_state = "state_1";
+current_state = "state_3";
 
 delay_shoot = .5 * game_get_speed(gamespeed_fps);
-wait_shoot = 0;
+wait_shoot_1 = 0;
+wait_shoot_2 = 0;
 
 delay_state = 5 * game_get_speed(gamespeed_fps);
 wait_state = delay_state;
 
+hsp = 3;
+
+max_life = 2000;
+life = max_life;
+
 state_1 = function () {
-	wait_shoot--;
+	wait_shoot_1--;
 	
-		if (wait_shoot <= 0) {
+		if (wait_shoot_1 <= 0) {
 			instance_create_layer(
 				x,
 				y + 80,
@@ -36,12 +42,38 @@ state_1 = function () {
 				obj_shoot_1
 			);
 			
-			wait_shoot = delay_shoot;
+			wait_shoot_1 = delay_shoot;
 		}	
 }
 
 state_2 = function() {
+	x += hsp;
+	
+	if(x >= room_width - (sprite_get_width(spr_boss_combat)/2) or x <= (sprite_get_width(spr_boss_combat)/2)) hsp *= -1;
+	
+	wait_shoot_2--;
+	if (wait_shoot_2 <= 0) {
+		instance_create_layer(
+			x - 160,
+			y + 10,
+			"Shoots",
+			obj_shoot_1
+		);
+		instance_create_layer(
+			x + 160,
+			y + 10,
+			"Shoots",
+			obj_shoot_1
+		);
+		
+		wait_shoot_2 = delay_shoot * 2;
+	}
 }
 
 state_3 = function() {
+	state_1();
+	state_2();
+}
+
+suffer_damage = function (_damage) {
 }
