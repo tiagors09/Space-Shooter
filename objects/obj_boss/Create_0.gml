@@ -75,5 +75,6 @@ state_3 = function() {
 	state_2();
 }
 
-suffer_damage = function (_damage) {
+state_4 = function () {
+	sprite_index = spr_boss_emerging;
 }
