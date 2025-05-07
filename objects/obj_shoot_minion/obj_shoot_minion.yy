@@ -1,7 +1,9 @@
 {
   "$GMObject":"",
   "%Name":"obj_shoot_minion",
-  "eventList":[],
+  "eventList":[
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+  ],
   "managed":true,
   "name":"obj_shoot_minion",
   "overriddenProperties":[],
@@ -9,7 +11,10 @@
     "name":"Shoots",
     "path":"folders/Objects/Shoots.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_shoot_1",
+    "path":"objects/obj_shoot_1/obj_shoot_1.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -27,7 +32,10 @@
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":null,
+  "spriteId":{
+    "name":"spr_big_shoot",
+    "path":"sprites/spr_big_shoot/spr_big_shoot.yy",
+  },
   "spriteMaskId":null,
   "visible":true,
 }
